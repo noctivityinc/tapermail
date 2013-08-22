@@ -1,0 +1,13 @@
+#!/bin/sh
+
+source "$HOME/.rvm/environments/default"
+
+if [[ -f Gemfile ]]
+then
+  bundle install --without test development >/dev/null 2>&1
+fi
+
+log step "Restarting unicorns"
+sm unicorn restart
+log step success
+

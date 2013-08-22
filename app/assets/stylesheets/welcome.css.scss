@@ -1,0 +1,60 @@
+@import url(http://fonts.googleapis.com/css?family=Economica:400,700);
+
+#aquarium {
+  width: 960px;
+  height: 600px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+
+  #leftSide {
+    width: 50%;
+    float: left;
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #rightSide {
+    width: 50%;
+    min-height: 100%;
+    float: right;
+    position: relative;
+
+    ul#nav {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+
+      list-style: none;
+      font-size: 24px;
+      font-family: 'Economica', sans-serif;
+      text-align: right;
+      color: #333;
+      display: none;
+    }
+  }
+
+  .fish {
+    width: 26px;
+    height: 20px;
+    position: absolute;
+    background: image-url('fish_email.png') no-repeat;
+
+    &.email {
+      background: image-url('email.png');
+    }
+  }
+
+  #logo {
+    position: absolute;
+    top: 250px;
+    left: 330px;
+    display: none;
+
+    img {
+      width: 300px;
+    }
+  }
+}

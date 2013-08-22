@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: taper_development
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: taper_test
+  pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: taper_production
+  pool: 5
