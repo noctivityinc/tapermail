@@ -2,7 +2,6 @@
 
 source "$HOME/.rvm/environments/default"
 
-
 paths enter "${stage_path}"
 
 log step "migrations ~ Running (rake db:migrate)"
