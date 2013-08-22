@@ -4,11 +4,6 @@ source "$HOME/.rvm/environments/default"
 
 paths enter "${stage_path}"
 
-precompile_assets()
-{
-  path enter "${release_path}"
-  rake assets:precompile
-}
 
 command exists bundle || gem install bundler --no-rdoc --no-ri
 
@@ -21,9 +16,4 @@ fi
 log step "migrations ~ Running (rake db:migrate)"
 rake db:migrate --trace
 log step success
-
-log step "Precompiling assets" 
-precompile_assets
-log step success
-
 
