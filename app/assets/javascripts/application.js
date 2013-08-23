@@ -1,17 +1,47 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
-// about supported directives.
-//
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require vendor
-//= require_tree .
+//= require common
+//= require welcome
+//= require_self
+
+
+UTIL = {
+  exec: function( controller, action ) {
+    var ns = TPR,
+        action = ( action === undefined ) ? "init" : action;
+
+    if ( controller !== "" && ns[controller] && typeof ns[controller][action] == "function" ) {
+      ns[controller][action]();
+    }
+  },
+ 
+  init: function() {
+    var body = document.body,
+        controller = body.getAttribute( "id" ),
+        action = body.getAttribute( "data-action" );
+ 
+    UTIL.exec( "common" );
+    UTIL.exec( controller );
+    UTIL.exec( controller, action );
+  }
+};
+ 
+$( document ).ready( UTIL.init );
+
+// Avoid `console` errors in browsers that lack a console.
+if (!(window.console && console.log)) {
+    (function() {
+        var noop = function() {};
+        var methods = ['assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'markTimeline', 'table', 'time', 'timeEnd', 'timeStamp', 'trace', 'warn'];
+        var length = methods.length;
+        var console = window.console = {};
+        while (length--) {
+            console[methods[length]] = noop;
+        }
+    }());
+}
+
+
+

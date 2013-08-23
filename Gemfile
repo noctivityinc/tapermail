@@ -46,6 +46,7 @@ gem 'debugger', group: [:development, :test]
 
 gem 'thin'
 gem 'haml-rails'
+gem 'quiet_assets', :group => :development
 
 
 

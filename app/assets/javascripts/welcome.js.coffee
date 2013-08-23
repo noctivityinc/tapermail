@@ -1,22 +1,26 @@
 spits = 0
 maxFish = 50
 
-$ ->
+TPR.welcome = (->
 
-  $aquarium = $('#aquarium')
-  $leftSide = $('#leftSide')
-  $logo = $('#logo')
-  lHeight = $leftSide.height()
-  lWidth = $leftSide.width()
+  init: ->
+    $aquarium = $('#aquarium')
+    $leftSide = $('#leftSide')
+    $logo = $('#logo')
+    lHeight = $leftSide.height()
+    lWidth = $leftSide.width()
 
-  $logo.fadeIn 2000, ->
-    addSchool $aquarium, $leftSide, lWidth, lHeight
-    window.setInterval (-> addSpit($aquarium)), 1500
+    $logo.fadeIn 2000, ->
+      addSchool $aquarium, $leftSide, lWidth, lHeight
+      window.setInterval (-> addSpit($aquarium)), 1500
 
-  $logo.click (ev) ->
-    ev.preventDefault()
-    $rightSide = $('#rightSide')
-    showNav($rightSide)
+    $logo.click (ev) ->
+      ev.preventDefault()
+      $rightSide = $('#rightSide')
+      showNav($rightSide)
+
+)()
+
 
 moveFish = ($aquarium, $leftSide, $fish, lWidth, lHeight) ->
   $logo = $('#logo')
@@ -83,7 +87,6 @@ addSpit = ($aquarium) ->
   $rightSide.append($fish)
 
   rightEdge = $rightSide.width() - ($fish.width() * 2)
-  console.log rightEdge
   $fish.animate {left: 1000}, 
     duration: 15000
     easing: 'linear'
