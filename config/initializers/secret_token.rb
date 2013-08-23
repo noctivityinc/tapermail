@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Tapermail::Application.config.secret_key_base = '4dccbf9901907dabefcf0512b4d9913a74a7bc57178f605658d83c5d46a594be871013d67f7beb42c1d57e0d0c34205c93ec256cc8faf758cdd47eb647455f47'
+Tapermail::Application.config.secret_key_base = 'a7d55359b00295b8d61e0868274258ce5795f18b71694dca58d8f7f844692262a2393d22fd05e0e08df045853652ddb942974f561ec0217324b47c2f0f692191'

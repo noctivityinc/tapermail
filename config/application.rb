@@ -27,7 +27,6 @@ module Tapermail
 
     # Add the fonts path
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
-    config.assets.paths << "#{Rails.root}/vendor/assets/fonts"
 
     # Precompile additional assets
     config.assets.precompile += %w( .svg .eot .woff .ttf )

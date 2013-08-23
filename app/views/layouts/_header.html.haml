@@ -1,0 +1,25 @@
+.container
+  .header
+    %nav.navbar.navbar-default{:role => "navigation"}
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-ex1-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{:href => "/"} 
+          = image_tag "taper_logo.jpeg", id: 'logo'
+      .collapse.navbar-collapse.navbar-ex1-collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li 
+            = link_to "what", what_path
+          %li
+            = link_to "video", video_path
+          %li
+            = link_to "contact", contact_path
+          %li
+            %div.navbar-btn
+              %a.btn.btn-success.btn-sm{href: '#'}
+                %span.icon.icon-star
+                Support our IndieGoGo Campaign
+

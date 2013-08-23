@@ -17,7 +17,10 @@
     %script{:src => "/js/modernizr-2.6.2.min.js"}
 
   %body{:id => controller.controller_path.gsub('/','_'), :class => controller.action_name, :data => {:action => controller.action_name}}
+    = render 'layouts/header'
     = yield
+    = render 'layouts/footer'
+  
   
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = yield :scripts

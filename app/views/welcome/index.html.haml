@@ -1,12 +1,14 @@
 .container
-  .header
-    %ul.nav.nav-pills.pull-right
-      %li.active
-        %a{:href => "#"} Home
-      %li
-        %a{:href => "#"} About
-      %li
-        %a{:href => "#"} Contact
-    %h3.navbar-brand 
-      = image_tag "logo.png", id: 'logo'
-  
+  .row
+    .col-md-12.text-center
+      %h1 
+        Taper fixes your email in roughly 23 seconds.
+        %br
+        %small * and you dont have to learn anything new to do it.
+  .row
+    .col-md-6.text-center
+      %h2 from this...
+      = image_tag "before_taper.png", class: 'img-responsive'
+    .col-md-6.text-center
+      %h2 to this...
+      = image_tag "after_taper.png", class: 'img-responsive'

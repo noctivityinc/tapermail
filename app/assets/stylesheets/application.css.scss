@@ -1,6 +1,23 @@
+@import url(http://fonts.googleapis.com/css?family=Economica:400,700);
 @import 'vendor';
 @import 'welcome';
 
-#logo {
-  height: 50px;
+// override bootstrap for nav
+.navbar-default {
+  background: white;
+  border: none;
 }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Economica', sans-serif;
+}
+
+
+#logo {
+  height: 75px;
+}
+
+h2 {
+  color: rgb(5,61,90);
+}
+
