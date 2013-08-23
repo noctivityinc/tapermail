@@ -1,12 +1,12 @@
-#aquarium
-  #leftSide
-  #rightSide
-    %ul#nav
-      %li what is taper
-      %li support our indiegogo campaign
-      %li watch our video
-      %li take control of email
-      %li contact us
-
-
-  #logo= image_tag "logo.png"
+.container
+  .header
+    %ul.nav.nav-pills.pull-right
+      %li.active
+        %a{:href => "#"} Home
+      %li
+        %a{:href => "#"} About
+      %li
+        %a{:href => "#"} Contact
+    %h3.navbar-brand 
+      = image_tag "logo.png", id: 'logo'
+  

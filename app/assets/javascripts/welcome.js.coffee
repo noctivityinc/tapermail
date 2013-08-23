@@ -3,7 +3,7 @@ maxFish = 50
 
 TPR.welcome = (->
 
-  init: ->
+  fishtank: ->
     $aquarium = $('#aquarium')
     $leftSide = $('#leftSide')
     $logo = $('#logo')
