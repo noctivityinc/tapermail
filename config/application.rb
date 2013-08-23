@@ -6,6 +6,11 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+# load here so it can be used in init files
+CONFIG = YAML.load(File.read(File.expand_path('../app_config.yml', __FILE__)))
+CONFIG.merge! CONFIG.fetch(Rails.env, {})
+CONFIG.symbolize_keys!
+
 module Tapermail
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
