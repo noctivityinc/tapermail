@@ -35,7 +35,7 @@ end
 gem 'thin'
 gem 'haml-rails'
 gem 'simple_form'
-gem 'nokogiri'
+# gem 'nokogiri'
 gem 'devise'
 gem 'country_select'
 gem "paperclip", "~> 3.4.1"
