@@ -82,8 +82,15 @@ addSpit = ($aquarium) ->
   $fish.css {top: xLine, left: 125}
   $rightSide.append($fish)
 
+  rightEdge = $rightSide.width() - ($fish.width() * 2)
+  console.log rightEdge
   $fish.animate {left: 1000}, 
     duration: 15000
+    easing: 'linear'
+    step: ->
+      if $fish.position().left >= rightEdge
+        $fish.fadeOut '200', ->
+          $fish.remove()
 
   showNav($rightSide)
 
