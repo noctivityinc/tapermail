@@ -46,38 +46,38 @@ gem 'simple_form'
 # gem 'split', :require => 'split/dashboard'
 # gem 'sitemap_generator'
 
-group :development do
-  gem 'jazz_hands'
-  gem 'rb-fsevent', :require => false
-  gem 'annotate'
-  gem 'quiet_assets'
-  gem "nifty-generators"
-end
+# group :development do
+#   gem 'jazz_hands'
+#   gem 'rb-fsevent', :require => false
+#   gem 'annotate'
+#   gem 'quiet_assets'
+#   gem "nifty-generators"
+# end
 
-group :test, :development do
-  gem 'debugger'
-  gem "rspec-rails"
-  gem 'factory_girl_rails'
-  gem 'debugger'
+# group :test, :development do
+#   gem 'debugger'
+#   gem "rspec-rails"
+#   gem 'factory_girl_rails'
+#   gem 'debugger'
 
-  # required to convert devise views to haml
-  # https://github.com/plataformatec/devise/wiki/How-To%3a-Create-Haml-and-Slim-Views
-  # for i in `find app/views/devise -name '*.erb'` ; do html2haml -e $i ${i%erb}haml ; rm $i ; done
-  gem 'ruby_parser'
-  gem 'html2haml', :git => "https://github.com/haml/html2haml.git"
-end
+#   # required to convert devise views to haml
+#   # https://github.com/plataformatec/devise/wiki/How-To%3a-Create-Haml-and-Slim-Views
+#   # for i in `find app/views/devise -name '*.erb'` ; do html2haml -e $i ${i%erb}haml ; rm $i ; done
+#   gem 'ruby_parser'
+#   gem 'html2haml', :git => "https://github.com/haml/html2haml.git"
+# end
 
 
-group :test do
-  gem 'capybara'
-  gem "capybara-webkit"
-  gem 'guard-rspec'
-  gem 'database_cleaner'
-  gem 'terminal-notifier-guard'
-  gem 'valid_attribute'
-  gem 'database_cleaner'
-  gem 'fuubar'
-end
+# group :test do
+#   gem 'capybara'
+#   gem "capybara-webkit"
+#   gem 'guard-rspec'
+#   gem 'database_cleaner'
+#   gem 'terminal-notifier-guard'
+#   gem 'valid_attribute'
+#   gem 'database_cleaner'
+#   gem 'fuubar'
+# end
 
-gem "mocha", :group => :test
+# gem "mocha", :group => :test
 
