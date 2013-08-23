@@ -36,15 +36,15 @@ gem 'thin'
 gem 'haml-rails'
 gem 'simple_form'
 # gem 'nokogiri'
-gem 'devise'
-gem 'country_select'
-gem "paperclip", "~> 3.4.1"
-gem "paperclip-aws", "~> 1.6.7"
-gem 'aws-sdk'
-gem 'faker'
-gem 'will_paginate'
-gem 'split', :require => 'split/dashboard'
-gem 'sitemap_generator'
+# gem 'devise'
+# gem 'country_select'
+# gem "paperclip", "~> 3.4.1"
+# gem "paperclip-aws", "~> 1.6.7"
+# gem 'aws-sdk'
+# gem 'faker'
+# gem 'will_paginate'
+# gem 'split', :require => 'split/dashboard'
+# gem 'sitemap_generator'
 
 group :development do
   gem 'jazz_hands'
