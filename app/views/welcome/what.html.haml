@@ -1,16 +1,17 @@
 .container
   .row
-    .col-md-4
+    .col-sm-4
       = image_tag "inbox_zero.png", :title => "Inbox Zero", :class => "img-responsive"
 
       .text-center
         %p
           %button.btn.btn-info
             %span.icon.icon-star
-            Support our IndieGoGo Campaign
-        %p
-          %button.btn.btn-success Get Taper
-    .col-md-8
+            Get it at our
+            %br
+            IndieGoGo Campaign
+
+    .col-sm-8
       %h1 Email is broken.  We fixed it.
 
       %p
@@ -46,15 +47,38 @@
         Also, your queue folder is always there, so you can easily jump to it IF you need to 
         (which rarely happens once you start using Taper cause you just do email better).
 
-      %h2 And You Learn Nothing New.  Nothing.
+      %h2 To Use, Do Nothing Different.
 
       %p 
         Taper just works, silently in the background, communicating with your email 
-        server to block email and move it when ready.  It's like a diaphram you 
+        server to block email and move it when ready.  Use Gmail, Yahoo, Outlook, Apple Mail your 
+        iPhone or whateva.  Don't matter.  It's like a diaphram you 
         didn't know was there (that let's in a baby or two every once in a while).
 
+      .clearfix
+      .row
+        .col-sm-3
+          #pavlovianDog.thumbnail
+            = image_tag "http://upload.wikimedia.org/wikipedia/commons/e/ec/One_of_Pavlov%27s_dogs.jpg", :title => "Pavlovian Dog", :class => "img-responsive"
+            .caption 
+              One of Pavlov's Dogs
+
+        .col-sm-9
+          %h1 But You'll Learn A Ton
+
+          %p 
+            With Taper, you simply learn how to manage email better.  True, you don't have to 
+            "learn" anything new to use Taper or use any fancy new software, but by using 
+            Taper you will find that your email habits improve.  Emails do not sit in your inbox. 
+            You either file or delete or Taper no give you new one.
+
+          %p 
+            It's better email management
+            = link_to "pavlovian dog", 'http://en.wikipedia.org/wiki/Ivan_Pavlov'  
+            style (yes, you're the dog).
 
 
 
 
-      
+
+          

@@ -4,6 +4,12 @@ body#welcome {
     
   }
 
+  &.what {
+    #pavlovianDog {
+      margin-top: 20px;
+    }
+  }
+
   &.fishtank {
     #aquarium {
       width: 960px;

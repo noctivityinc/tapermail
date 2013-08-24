@@ -1,6 +1,7 @@
 Tapermail::Application.routes.draw do
 
   get '/what' => 'welcome#what', as: 'what'
+  get '/how' => 'welcome#how', as: 'how'
   get '/support' => 'welcome#support', as: 'support'
   get '/video' => 'welcome#video', as: 'video'
   get '/contact' => 'welcome#contact', as: 'contact'
