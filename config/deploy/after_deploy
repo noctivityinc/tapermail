@@ -8,7 +8,6 @@ precompile_assets()
   rake assets:precompile
 }
 
-
 if [[ -f Gemfile ]]
 then
   bundle install --without test development >/dev/null 2>&1
@@ -19,7 +18,11 @@ precompile_assets
 log step success
 
 
-log step "Restarting unicorns"
-restart
+log step "Stopping unicorns"
+stop
+log step success
+
+log step "Starting unicorns"
+start
 log step success
 
