@@ -3,6 +3,8 @@ var TPR = {}
 TPR.common = {
     init: function () {
 
+      $('header a[href="' + location.pathname + '"]').parent().addClass('active');
+
       $('#fbLoginButton').click(function(event) {
         event.preventDefault();
         $('.spinner').show()
