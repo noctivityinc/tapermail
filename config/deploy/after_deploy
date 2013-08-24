@@ -20,6 +20,6 @@ log step success
 
 
 log step "Restarting unicorns"
-sm unicorn restart
+restart
 log step success
 

@@ -15,7 +15,7 @@
         %li Taper securely monitors your server
         %li When it sees new email, it moves up to <strong>five emails</strong> into your inbox for you to deal with.  Our extensive research shows that five is a small number, which makes it easy to manage.
         %li All other emails are moved to a new <code>@TaperQueue</code> folder/label in your account.  If you really can't wait for something to move to your inbox, you can view it in the queue folder.
-        %li If you have messages in your queue for more than five minutes, we send you a single summary email letting you know what's waiting for you.
+        
 
   .row.top30
     .col-sm-6
@@ -30,7 +30,7 @@
 
   .row.top30
     .col-sm-6
-      = image_tag "sketches/overview.jpg", class: 'img-responsive img-thumbnail'
+      = image_tag "sketches/less_important.jpg", class: 'img-responsive img-thumbnail'
     .col-sm-6
       %h2 Missing Important Emails
 
@@ -40,10 +40,12 @@
           %em This won't work for me.  I'll miss too many important emails
 
       %p
-        How can we put this delicately - you're wrong.  We can't tell you why, you need to 
-        experience it, but with Taper you just learn how to do everything better, quickly, 
-        so your queue will be incredibly small if not empty almost all the time.
+        How can we put this delicately - you're wrong.  There are three reasons why:
 
+        %ol
+          %li Since Taper makes you delete, file or flag for follow-up on an email before letting you see the next one, you learn how to process your email extremely quickly without even realizing you're doing it.
+          %li We cheat.  Taper moves all newsletters and mass emails to the end of the queue so you receive everything else first before receiving the less important stuff.
+          %li If you have messages in your queue for more than five minutes, we send you a single summary email letting you know what's waiting for you.  Need it now, just view it in the queue folder.
 
   .row.top30
     .col-xs-12.text-center
