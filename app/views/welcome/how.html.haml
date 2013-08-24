@@ -1,2 +1,67 @@
 .container  
-  %h1 How
+  .page-header.text-center
+    %h1
+      How Taper Works
+      %small explained with pretty sketches
+  .row
+    .col-sm-6
+      = image_tag "sketches/cloud_queue_inbox.jpg", class: 'img-responsive img-thumbnail'
+    .col-sm-6
+      %h2 The Flow
+
+      %ol
+        %li People send you email.  They just won't stop
+        %li This email, right now, goes into the "cloud" where it waits for you to view it online, on your phone or your computer
+        %li Taper securely monitors your server
+        %li When it sees new email, it moves up to <strong>five emails</strong> into your inbox for you to deal with.  Our extensive research shows that five is a small number, which makes it easy to manage.
+        %li All other emails are moved to a new <code>@TaperQueue</code> folder/label in your account.  If you really can't wait for something to move to your inbox, you can view it in the queue folder.
+        %li If you have messages in your queue for more than five minutes, we send you a single summary email letting you know what's waiting for you.
+
+  .row.top30
+    .col-sm-6
+      = image_tag "sketches/move_and_new.jpg", class: 'img-responsive img-thumbnail'
+    .col-sm-6
+      %h2 Clearing A Spot
+
+      %p.lead
+        With only five emails to deal with at a time, you'll honestly be amazed at how 
+        quickly you can deal with email.  Once you delete, file (label) or flag (star) an 
+        email to get it out of your inbox, Taper lets the next email through.
+
+  .row.top30
+    .col-sm-6
+      = image_tag "sketches/overview.jpg", class: 'img-responsive img-thumbnail'
+    .col-sm-6
+      %h2 Missing Important Emails
+
+      %p
+        Everyone who hears about Taper, literally everyone, thinks this before actually trying it:
+        %blockquote 
+          %em This won't work for me.  I'll miss too many important emails
+
+      %p
+        How can we put this delicately - you're wrong.  We can't tell you why, you need to 
+        experience it, but with Taper you just learn how to do everything better, quickly, 
+        so your queue will be incredibly small if not empty almost all the time.
+
+
+  .row.top30
+    .col-xs-12.text-center
+      %p.lead
+        Hey, don't take our word for it.  
+
+      %p.lead
+        Check out our IndieGoGo Campaign and give 
+        Taper a try for one week. 
+      
+      %p.lead
+        Take our Pepsi &copy; challenge.  Help us fix email, forever.
+
+      %button.btn.btn-success.btn-lg
+        %span.icon.icon-star
+        Get Taper through our
+        IndieGoGo Campaign
+
+
+
+
