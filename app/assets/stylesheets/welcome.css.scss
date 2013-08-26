@@ -34,20 +34,44 @@ body#welcome {
         margin-top: 50px;
       }
     }
+  }  
 
-  }
+  &.index2 {
 
-  &.what {
-    #pavlovianDog {
-      margin-top: 20px;
+    section {
+      margin: 10px;
+      border-radius: 5px;
+      padding-bottom: 20px;
+    }
+
+    #index {
+      background: #D8D8C0;
+
+      .container.bg {
+      }
+    }
+
+    #what {
+      background: #F0F0D8;
+
+      .left_col {
+        padding-top: 75px;
+      }
+    }
+
+    #how {
+      background: #F0D8D8;
+    }
+    
+    #video {
+      background: #D8D8D8;
+
+      video {
+        margin-top: 50px;
+      }
     }
   }
 
-  &.how {
-    li {
-      margin-bottom: 1.5em;
-    }
-  }
   
 }
 
