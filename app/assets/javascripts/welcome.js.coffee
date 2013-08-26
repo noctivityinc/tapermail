@@ -4,43 +4,10 @@ maxFish = 50
 TPR.welcome = (->
 
   index: ->
+    $('header .navbar-brand').waypoint('sticky')
 
-    $bg = $('#bg')
-    $('section').waypoint (direction)->
-      $this = $(this)
-
-      if direction == 'up' 
-        $prev = $this.prev('section')
-
-        if $prev.length > 0
-          bgImg = $prev.data('bg')
-
-      else
-        bgImg = $this.data('bg')
-
-      if bgImg and not $bg.hasClass(bgImg)
-        $bg.removeClass().addClass(bgImg)
-        $bg.animate {opacity: 0}, 100, ->
-          $bg.html("<img src='"+bgImg+"'/>").animate({opacity: 1})
-
-    , offset: 50
-
-
-  fishtank: ->
-    $aquarium = $('#aquarium')
-    $leftSide = $('#leftSide')
-    $logo = $('#logo')
-    lHeight = $leftSide.height()
-    lWidth = $leftSide.width()
-
-    $logo.fadeIn 2000, ->
-      addSchool $aquarium, $leftSide, lWidth, lHeight
-      window.setInterval (-> addSpit($aquarium)), 1500
-
-    $logo.click (ev) ->
-      ev.preventDefault()
-      $rightSide = $('#rightSide')
-      showNav($rightSide)
+    $.localScroll
+      duration: 300
 
 )()
 

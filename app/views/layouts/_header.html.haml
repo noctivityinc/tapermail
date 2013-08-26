@@ -1,4 +1,4 @@
-%header
+%header#header
   .container
     .header
       %nav.navbar.navbar-default{:role => "navigation"}
@@ -8,16 +8,16 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.navbar-brand{:href => "/"} 
+          %a.navbar-brand{:href => "#header"} 
             = image_tag "taper_logo.jpeg", id: 'logo'
         .collapse.navbar-collapse.navbar-ex1-collapse
           %ul.nav.navbar-nav.navbar-right
-            %li= link_to "what", what_path
-            %li= link_to "how", how_path
-            %li= link_to "video", video_path
+            %li= link_to "what", '#what'
+            %li= link_to "how", '#how'
+            %li= link_to "video", '#video'
             %li= link_to "contact", contact_path
             %li
-              %div.navbar-btn
+              %div.navbar-btn.get_taper
                 %a.btn.btn-success.btn-sm{href: '#'}
                   %span.icon.icon-star
                   Download via IndieGoGo

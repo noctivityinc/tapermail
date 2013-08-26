@@ -10,9 +10,25 @@
   padding-right: 20px;
 }
 
+.navbar-brand {
+  background: white;
+
+  &:hover {
+    background: white !important;    
+  }
+}
+
 .page-header {
   margin-top: 0px;
 }
+
+.stuck {
+  position:fixed;
+  top:0;
+  box-shadow:0 2px 4px rgba(0, 0, 0, .3);
+}
+
+
 
 h1, h2, h3, h4, h5 {
   font-family: 'Economica', sans-serif;
@@ -45,8 +61,3 @@ footer {
   padding: 3px 10px;
 }
 
-section {
-  // background: rgba(255, 255, 255, .85);
-  position: relative;
-  z-index: 2;
-}
