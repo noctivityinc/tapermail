@@ -1,7 +1,45 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
-
+@import 'fonts';
 @import 'vendor';
 @import 'welcome';
+
+html, body, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'AvenirNextLTW01-Regular';
+  // color: #f2ede3;
+}
+
+h1 {
+    line-height: 1em;
+    font-family: 'Avenir Next LT W01 Bold';
+    // font-size: 75px;
+    font-size: 3em;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+h2 {
+    font-size: 2.25em;
+    font-weight: normal;
+}
+h3 {
+    font-family: 'AvenirNextLTW01-Regular';
+    font-size: 1.75em;
+    font-weight: normal;
+
+    &.bold {
+      font-family: 'Avenir Next LT W01 Bold';
+    }
+}
+h4 {
+    font-family: 'Avenir Next LT W01 Bold';
+    font-size: 1.25em;
+    font-weight: normal;
+}
+h5 {
+    font-family: 'Avenir Next LT W01 Bold';
+    font-size: 1.10em;
+    font-weight: normal;
+}
+
 
 // override bootstrap for nav
 .navbar-default {
@@ -9,6 +47,7 @@
   border: none;
   opacity: 0.85;
   padding-right: 20px;
+  box-shadow:0 2px 4px rgba(0, 0, 0, .3);
 }
 
 .navbar-brand {
@@ -30,18 +69,8 @@
 }
 
 
-
-h1, h2, h3, h4, h5 {
-  font-family: 'Open Sans', sans-serif;
-}
-
-
 #logo {
   height: 40px;
-}
-
-h2 {
-  color: rgb(5,61,90);
 }
 
 
@@ -53,12 +82,5 @@ footer {
 .top30 {
   clear: both;
   margin-top: 30px;
-}
-
-.text-bg-light {
-  background: rgba(255, 255, 255, 0.75);
-  display: table;
-  margin: auto;
-  padding: 3px 10px;
 }
 

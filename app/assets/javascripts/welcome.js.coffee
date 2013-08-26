@@ -4,8 +4,6 @@ maxFish = 50
 TPR.welcome = (->
 
   index: ->
-    $('header .navbar-brand').waypoint('sticky')
-
     $.localScroll
       duration: 300
 

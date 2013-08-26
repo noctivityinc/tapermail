@@ -3,75 +3,43 @@ body#welcome {
   &.index {
 
     section {
-      margin: 10px;
-      border-radius: 5px;
       padding-bottom: 20px;
+      padding-top: 100px;
+    }
+
+    .break {
+      clear: both;
+      margin: 30px auto;
+      border-bottom: 2px solid #95928e; 
+      width: 80%;
+      display: block;
+      text-align: center;
     }
 
     #index {
-      background: image-url('bg/4.jpg') no-repeat center center fixed;
-
+      // background: image-url('bg/4.jpg') no-repeat center center fixed;
+      
       .container.bg {
+
       }
     }
 
     #what {
-      background: image-url('bg/5.jpg') no-repeat center center fixed;
-
       .left_col {
         padding-top: 75px;
       }
     }
 
     #how {
-      background: image-url('bg/6.jpg') no-repeat center center fixed;
     }
     
     #video {
-      background: image-url('bg/7.jpg') no-repeat center center fixed;
-
       video {
         margin-top: 50px;
       }
     }
   }  
-
-  &.index2 {
-
-    section {
-      margin: 10px;
-      border-radius: 5px;
-      padding-bottom: 20px;
-    }
-
-    #index {
-      background: #D8D8C0;
-
-      .container.bg {
-      }
-    }
-
-    #what {
-      background: #F0F0D8;
-
-      .left_col {
-        padding-top: 75px;
-      }
-    }
-
-    #how {
-      background: #F0D8D8;
-    }
-    
-    #video {
-      background: #D8D8D8;
-
-      video {
-        margin-top: 50px;
-      }
-    }
-  }
-
+  
   
 }
 
