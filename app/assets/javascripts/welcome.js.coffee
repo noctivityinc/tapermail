@@ -3,6 +3,29 @@ maxFish = 50
 
 TPR.welcome = (->
 
+  index: ->
+
+    $bg = $('#bg')
+    $('section').waypoint (direction)->
+      $this = $(this)
+
+      if direction == 'up' 
+        $prev = $this.prev('section')
+
+        if $prev.length > 0
+          bgImg = $prev.data('bg')
+
+      else
+        bgImg = $this.data('bg')
+
+      if bgImg and not $bg.hasClass(bgImg)
+        $bg.removeClass().addClass(bgImg)
+        $bg.animate {opacity: 0}, 100, ->
+          $bg.html("<img src='"+bgImg+"'/>").animate({opacity: 1})
+
+    , offset: 50
+
+
   fishtank: ->
     $aquarium = $('#aquarium')
     $leftSide = $('#leftSide')

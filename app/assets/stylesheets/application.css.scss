@@ -6,6 +6,8 @@
 .navbar-default {
   background: white;
   border: none;
+  opacity: 0.85;
+  padding-right: 20px;
 }
 
 .page-header {
@@ -34,4 +36,17 @@ footer {
 .top30 {
   clear: both;
   margin-top: 30px;
+}
+
+.text-bg-light {
+  background: rgba(255, 255, 255, 0.75);
+  display: table;
+  margin: auto;
+  padding: 3px 10px;
+}
+
+section {
+  // background: rgba(255, 255, 255, .85);
+  position: relative;
+  z-index: 2;
 }

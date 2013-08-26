@@ -1,21 +1,106 @@
-.container
-  .row
-    .col-md-12.text-center
-      %h1 
-        Taper fixes your email in roughly 23 seconds.
-        %br
-        %small * and you dont have to learn anything new to do it.
-  .row
-    .col-xs-6.text-center
-      %h2 from this...
-      = image_tag "before_taper.png", class: 'img-responsive'
-    .col-xs-6.text-center
-      %h2 to this...
-      = image_tag "after_taper.png", class: 'img-responsive'
+%section#index.active{:data => {bg: path_to_image('bg/4.jpg')}}
+  .container
+    .row
+      .col-md-12.text-center
+        %h1 
+          Taper fixes your email in roughly 23 seconds.
+          %br
+          %small * and you dont have to learn anything new to do it.
+    .row
+      .col-xs-6.text-center
+        %h2 from this...
+        = image_tag "before_taper.png", class: 'img-responsive'
+      .col-xs-6.text-center
+        %h2 to this...
+        = image_tag "after_taper.png", class: 'img-responsive'
 
-  .row
-    .col-xs-12.text-center
-      %button.btn.btn-success.btn-lg
-        %span.icon.icon-star
-        Get Taper through our
-        IndieGoGo Campaign
+    .row
+      .col-xs-12.text-center
+        %button.btn.btn-success.btn-lg
+          %span.icon.icon-star
+          Get Taper through our
+          IndieGoGo Campaign
+
+%section#what{:data => {bg: path_to_image('bg/5.jpg')}}
+  .container
+    .row
+      .col-sm-4
+        = image_tag "inbox_zero.png", :title => "Inbox Zero", :class => "img-responsive"
+
+        .text-center
+          %p
+            %button.btn.btn-info
+              %span.icon.icon-star
+              Get it at our
+              %br
+              IndieGoGo Campaign
+
+      .col-sm-8
+        %h1 Email is broken.  We fixed it.
+
+        %p
+          Instead of letting every email you ever receive go directly to your inbox, Taper 
+          lets in five. 
+
+        %h2 That's Right, Just Five Emails.
+
+        %p
+          Once you delete, archive, move or flag an email, another's allowed in.
+
+        %h1 Yes We're Serious.  It's That Damn Simple.
+
+        %p
+          No emails are filtered out, you'll eventually see everything, but in a 
+          calm, zen like way instead of having a crap load of email constantly dumped on you.
+
+        %h2 Do I Really Need This?
+
+        %p
+          Look at your inbox, right now.  Are there more than 20 emails sitting there?  Then 
+          yeah, you need it.  Because every email that comes in after this point, right now, 
+          adds stress, decreases productivity and wastes your time.
+
+        %h1 But I'm Going To Miss Something! AHHHHHH
+
+        %p
+          See, you're stressed.  But with Taper you won't be and you won't miss anything.  
+
+        %p
+          If you end up with emails in your queue 
+          Taper will send you a single summary email so you can see what's there at a glance.  
+          Also, your queue folder is always there, so you can easily jump to it IF you need to 
+          (which rarely happens once you start using Taper cause you just do email better).
+
+        %h2 To Use, Do Nothing Different.
+
+        %p 
+          Taper just works, silently in the background, communicating with your email 
+          server to block email and move it when ready.  Use Gmail, Yahoo, Outlook, Apple Mail your 
+          iPhone or whateva.  Don't matter.  It's like a diaphram you 
+          didn't know was there (that let's in a baby or two every once in a while).
+
+        .clearfix
+        .row
+          .col-sm-3
+            #pavlovianDog.thumbnail
+              = image_tag "http://upload.wikimedia.org/wikipedia/commons/e/ec/One_of_Pavlov%27s_dogs.jpg", :title => "Pavlovian Dog", :class => "img-responsive"
+              .caption 
+                One of Pavlov's Dogs
+
+          .col-sm-9
+            %h1 But You'll Learn A Ton
+
+            %p 
+              With Taper, you simply learn how to manage email better.  True, you don't have to 
+              "learn" anything new to use Taper or use any fancy new software, but by using 
+              Taper you will find that your email habits improve.  Emails do not sit in your inbox. 
+              You either file or delete or Taper no give you new one.
+
+            %p 
+              It's better email management
+              = link_to "pavlovian dog", 'http://en.wikipedia.org/wiki/Ivan_Pavlov'  
+              style (yes, you're the dog).
+
+
+#bg
+  = image_tag "bg/4.jpg"
