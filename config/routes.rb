@@ -1,6 +1,7 @@
 Tapermail::Application.routes.draw do
 
-  get '/index2' => 'welcome#index2', as: 'index2'
+  get '/what' => 'welcome#what', as: 'what'
+  get '/how' => 'welcome#how', as: 'how'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -2,9 +2,18 @@
 @import 'vendor';
 @import 'welcome';
 
+html, body {
+  background: image-url('bg/vertical_cloth.png');
+}
+
 html, body, h1, h2, h3, h4, h5, h6, p {
   font-family: 'AvenirNextLTW01-Regular';
   // color: #f2ede3;
+}
+
+section {
+  background: white;
+  padding-top: 30px;
 }
 
 h1 {
@@ -42,19 +51,26 @@ h5 {
 
 
 // override bootstrap for nav
-.navbar-default {
-  background: white;
-  border: none;
-  opacity: 0.85;
-  padding-right: 20px;
-  box-shadow:0 2px 4px rgba(0, 0, 0, .3);
-}
-
-.navbar-brand {
+header {
+  margin-bottom: 0px;
   background: white;
 
-  &:hover {
-    background: white !important;    
+  .navbar-default {
+    margin-bottom: 0px;
+    background: white;
+    border: none;
+    padding-right: 20px;
+    box-shadow:0 2px 4px rgba(0, 0, 0, .3);
+    width: 100%;
+  }
+
+  .navbar-brand {
+    background: white;
+    padding: 5px 15px;
+
+    &:hover {
+      background: white !important;    
+    }
   }
 }
 

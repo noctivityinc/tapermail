@@ -1,0 +1,68 @@
+%section 
+  .container.bg
+    .page-header.text-center
+      %h1
+        How Taper Works
+        %small explained with pretty sketches
+    .row
+      .col-sm-6
+        = image_tag "sketches/cloud_queue_inbox.jpg", class: 'img-responsive img-thumbnail'
+      .col-sm-6
+        %h2 The Flow
+
+        %ol
+          %li People send you email.  They just won't stop.
+          %li These emails, right now, go into the "cloud" where they wait for you to view them online, on your phone or your computer.
+          %li Taper securely monitors your account for new mail. Taper stores nothing and saves nothing.
+          %li When it detects new mail, it moves up to <strong>five emails</strong> into your inbox for you to deal with.  Our extensive research shows that five is a small number, which makes then fast and easy to manage.
+          %li All other emails are moved to a new <code>@TaperQueue</code> folder/label in your account that can be viewed at any time.
+          %li When you are ready to handle new email, Taper will move them from <code>@TaperQueue</code> to your <code>inbox.</code>
+          
+
+    .row.top30
+      .col-sm-6
+        = image_tag "sketches/move_and_new.jpg", class: 'img-responsive img-thumbnail'
+      .col-sm-6
+        %h2 Clearing A Spot
+
+        %p
+          With only five emails to deal with at a time, you'll honestly be amazed at how 
+          quickly you can deal with email.  Once you delete, file (label) or flag (star) an 
+          email to get it out of your inbox, Taper lets the next email through.
+
+    .row.top30
+      .col-sm-6
+        = image_tag "sketches/less_important.jpg", class: 'img-responsive img-thumbnail'
+      .col-sm-6
+        %h2 Missing Important Emails
+
+        %p
+          Everyone who hears about Taper, literally everyone, thinks this before actually trying it:
+          %blockquote 
+            %em This won't work for me.  I'll miss too many important emails
+
+        %p
+          How can we put this delicately - you're wrong.  There are three reasons why:
+
+          %ol
+            %li Since Taper makes you delete, file or flag for follow-up on an email before letting you see the next one, you learn how to process your email extremely quickly without even realizing you're doing it.
+            %li We cheat.  Taper moves all newsletters and mass emails to the end of the queue so you receive everything else first before receiving the less important stuff.
+            %li If you have messages in your queue for more than five minutes, we send you a single summary email letting you know what's waiting for you.  Need it now, just view it in the queue folder.
+
+    .row.top30
+      .col-xs-12.text-center
+        %p.lead
+          Hey, don't take our word for it.  
+
+        %p.lead
+          Check out our IndieGoGo Campaign and give 
+          Taper a try for one week. 
+        
+        %p.lead
+          Take our Pepsi &copy; challenge.  Help us fix email, forever.
+
+        = render 'get_taper_cta'
+
+
+
+

@@ -2,9 +2,28 @@ body#welcome {
 
   &.index {
 
+    #topBG {
+      background: image-url('bg/vertical_cloth.png');
+      margin: -30px 0px 0px 0px;
+      padding-top: 50px;
+      padding-bottom: 0px;
+      border-bottom: 1px solid #95928e;
+      box-shadow:0 2px 4px rgba(0, 0, 0, .75);
+      z-index: -1;
+
+      h1, h2, h3 {
+        color: #F0F0F0;
+      }
+    }
+
+    #mainCTABG {
+      background: image-url('bg/fabric_plaid.png');
+      padding: 30px 0px;
+      box-shadow:0 2px 4px rgba(0, 0, 0, .35);
+    }
+
     section {
       padding-bottom: 20px;
-      padding-top: 100px;
     }
 
     .break {
@@ -25,21 +44,36 @@ body#welcome {
     }
 
     #what {
-      .left_col {
-        padding-top: 75px;
+      .icon-5x {
+        font-size: 12em;
+        text-align: center;
+      }
+
+      .icon-size {
+        height: 170px;
       }
     }
 
     #how {
+      
     }
     
     #video {
-      video {
-        margin-top: 50px;
-      }
+      box-shadow:0 2px 4px rgba(0, 0, 0, .75);
+      border-bottom: 1px solid #B8B8B8;
+    }
+
+    #footerCTA {
+      box-shadow:0 2px 4px rgba(0, 0, 0, .75); 
     }
   }  
   
+  &.how, &.what, &.contact {
+    section {
+      padding-bottom: 50px;
+      box-shadow:0 2px 4px rgba(0, 0, 0, .75); 
+    }
+  }
   
 }
 
