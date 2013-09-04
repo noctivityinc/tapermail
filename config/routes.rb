@@ -1,5 +1,8 @@
 Tapermail::Application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   get '/what' => 'welcome#what', as: 'what'
   get '/how' => 'welcome#how', as: 'how'
 
@@ -56,6 +59,12 @@ Tapermail::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  namespace :api, defaults: {format: 'json'} do
+    scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
+      resources :greylists, only: [:index]
+    end
+  end
 
   root 'welcome#index'
 end

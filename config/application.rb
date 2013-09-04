@@ -30,5 +30,9 @@ module Tapermail
 
     # Precompile additional assets
     config.assets.precompile += %w( .svg .eot .woff .ttf )
+
+    config.generators do |g|
+      g.test_framework :rspec
+    end
   end
 end

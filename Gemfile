@@ -35,49 +35,53 @@ end
 gem 'thin'
 gem 'haml-rails'
 gem 'simple_form'
+gem 'activeadmin', github: 'gregbell/active_admin', branch: 'rails4'
 # gem 'nokogiri'
 # gem 'devise'
 # gem 'country_select'
 # gem "paperclip", "~> 3.4.1"
 # gem "paperclip-aws", "~> 1.6.7"
 # gem 'aws-sdk'
-# gem 'faker'
+gem 'faker'
 # gem 'will_paginate'
 # gem 'split', :require => 'split/dashboard'
 # gem 'sitemap_generator'
 
-# group :development do
-#   gem 'jazz_hands'
-#   gem 'rb-fsevent', :require => false
-#   gem 'annotate'
-#   gem 'quiet_assets'
-#   gem "nifty-generators"
-# end
+group :development do
+  gem 'jazz_hands'
+  gem 'rb-fsevent', :require => false
+  gem 'annotate'
+  gem 'quiet_assets'
+  gem "nifty-generators"
+end
 
-# group :test, :development do
-#   gem 'debugger'
-#   gem "rspec-rails"
-#   gem 'factory_girl_rails'
-#   gem 'debugger'
-
-#   # required to convert devise views to haml
-#   # https://github.com/plataformatec/devise/wiki/How-To%3a-Create-Haml-and-Slim-Views
-#   # for i in `find app/views/devise -name '*.erb'` ; do html2haml -e $i ${i%erb}haml ; rm $i ; done
-#   gem 'ruby_parser'
-#   gem 'html2haml', :git => "https://github.com/haml/html2haml.git"
-# end
+group :test, :development do
+  gem 'debugger'
+  gem "rspec-rails"
+  gem 'factory_girl_rails'
+  gem 'debugger'
+  gem 'spring', '0.0.9'
+  gem 'guard-spring'
 
 
-# group :test do
-#   gem 'capybara'
-#   gem "capybara-webkit"
-#   gem 'guard-rspec'
-#   gem 'database_cleaner'
-#   gem 'terminal-notifier-guard'
-#   gem 'valid_attribute'
-#   gem 'database_cleaner'
-#   gem 'fuubar'
-# end
+  # required to convert devise views to haml
+  # https://github.com/plataformatec/devise/wiki/How-To%3a-Create-Haml-and-Slim-Views
+  # for i in `find app/views/devise -name '*.erb'` ; do html2haml -e $i ${i%erb}haml ; rm $i ; done
+  gem 'ruby_parser'
+  gem 'html2haml', :git => "https://github.com/haml/html2haml.git"
+end
+
+
+group :test do
+  gem 'capybara'
+  gem "capybara-webkit"
+  gem 'guard-rspec'
+  gem 'database_cleaner'
+  gem 'terminal-notifier-guard'
+  gem 'valid_attribute'
+  gem 'database_cleaner'
+  gem 'fuubar'
+end
 
 # gem "mocha", :group => :test
 
