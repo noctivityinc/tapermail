@@ -1,3 +1,39 @@
-// Place all the styles related to the app controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body#app {
+
+  &.tour {
+    background: white; 
+
+    #logo {
+      margin: 10px 0px;
+      float: right;
+    }
+
+    .carousel-inner {
+      height: 400px;
+
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+      }
+
+      .nosub {
+        margin-bottom: 30px;
+      }
+    }
+
+    .carousel-control {
+      .left {
+
+      }
+
+      .right {
+
+      }
+    }
+  }
+}
