@@ -1,7 +1,15 @@
 Tapermail::Application.routes.draw do
 
+  get "app/help"
+  get "app/version"
+  get "app/tour"
+
   get '/what' => 'welcome#what', as: 'what'
   get '/how' => 'welcome#how', as: 'how'
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -56,6 +64,13 @@ Tapermail::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  namespace :api, defaults: {format: 'json'} do
+    scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
+      resources :greylists, only: [:index]
+      resources :app_logs, only: [:create, :index, :show]
+    end
+  end
 
   root 'welcome#index'
 end
