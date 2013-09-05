@@ -1,6 +1,8 @@
 #!/bin/sh
 
-source "$HOME/.rvm/environments/default"
+source "$HOME/.env"
+
+cd $release_path
 
 log step "Restarting unicorns"
 restart
