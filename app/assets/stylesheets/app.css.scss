@@ -16,7 +16,7 @@ body#app {
       }
 
       p {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.5em;
         margin-bottom: 20px;
       }
@@ -24,15 +24,15 @@ body#app {
       .nosub {
         margin-bottom: 30px;
       }
+
+      .flaticon {
+        font-size: 48px;
+      }
     }
 
-    .carousel-control {
-      .left {
-
-      }
-
-      .right {
-
+    #controls {
+      .prev, .done {
+        display: none;
       }
     }
   }

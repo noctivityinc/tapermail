@@ -14,53 +14,16 @@
           %li{"data-slide-to" => "2", "data-target" => "#carousel"}
         
         .carousel-inner
-          #slide1.item.active
-            .text-center
-              %h1 Welcome to Taper
-              %h2 Here's how it works
-
-            .row
-              .col-xs-6
-                = image_tag "sketches/cloud_queue_inbox.jpg", class: 'img-responsive img-thumbnail'
-              .col-xs-6
-                %p
-                  Instead of all of your email going into your inbox, 
-                  Taper will act as a virtual "doorman" and only let FIVE emails 
-                  into your inbox at a time.  
-
-                %p
-                  Five, being small, is easy for you to digest and manage.
-
-          #slide2.item
-            .text-center
-              %h1.nosub Receiving new emails
-
-            .row
-              .col-xs-3.text-center
-                %i.flaticon.stroke.trash-2
-                .clear
-                %i.flaticon.stroke.open-folder-3
-                .clear
-                %i.flaticon.solid.star-2 
-              .col-xs-9
-                %p
-                  Once you delete, move, label, flag or star an email in your inbox, Taper lets the next one in.  
-
-                %p
-                  .label.label-primary Tip
-                  only <strong>star</strong> or <strong>flag</strong> emails that you truly can't deal with right now and must deal with later.  
-                  Too many flagged emails is a sign you're leaving too many things to deal with later.
-
-                %p
-                  .label.label-primary Tip Tip
-                  if you're used to keeping emails in your inbox that are expecting a follow-up, don't, they take up space and mindshare.  
-                  Either delete them and wait for the reply or file them into a new folder called "waiting" or something similar.
-
-          #slide3.item
-            %h1 This is the third one
+          #slide1.item.first.active= render 'tour_slide_1'
+          #slide2.item= render 'tour_slide_2'
+          #slide3.item= render 'tour_slide_3'
+          #slide4.item.last= render 'tour_slide_4'
+            
 
 .container
   .row
     .col-sm-12
-      %a.prev.btn.btn-info.pull-left{"data-slide" => "prev", :href => "#carousel"} Prev
-      %a.next.btn.btn-success.pull-right{"data-slide" => "next", :href => "#carousel"} Next
+      #controls
+        %a.prev.btn.btn-info.pull-left{"data-slide" => "prev", :href => "#carousel"} Prev
+        %a.next.btn.btn-success.pull-right{"data-slide" => "next", :href => "#carousel"} Next
+        %a.done.btn.btn-danger.pull-right{:href => "javascript:window.close();"} Close Tour
