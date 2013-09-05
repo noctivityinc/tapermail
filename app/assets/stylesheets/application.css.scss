@@ -1,9 +1,14 @@
 @import 'fonts';
 @import 'vendor';
 @import 'welcome';
+@import 'app';
 
 html, body {
   background: image-url('bg/vertical_cloth.png');
+
+  &.blank {
+    background: none;
+  }
 }
 
 html, body, h1, h2, h3, h4, h5, h6, p {
@@ -47,6 +52,10 @@ h5 {
     font-family: 'Avenir Next LT W01 Bold';
     font-size: 1.10em;
     font-weight: normal;
+}
+
+strong {
+  font-family: 'Avenir Next LT W01 Bold';
 }
 
 

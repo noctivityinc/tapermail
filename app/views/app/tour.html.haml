@@ -1,2 +1,29 @@
-%h1 App#tour
-%p Find me in app/views/app/tour.html.haml
+.container
+  .row
+    .col-sm-12
+      = image_tag "taper_logo.jpeg", id: 'logo'
+
+.container
+  .row
+    .col-sm-12
+      #carousel.carousel.slide
+        / Indicators
+        %ol.carousel-indicators
+          %li.active{"data-slide-to" => "0", "data-target" => "#carousel"}
+          %li{"data-slide-to" => "1", "data-target" => "#carousel"}
+          %li{"data-slide-to" => "2", "data-target" => "#carousel"}
+        
+        .carousel-inner
+          #slide1.item.first.active= render 'tour_slide_1'
+          #slide2.item= render 'tour_slide_2'
+          #slide3.item= render 'tour_slide_3'
+          #slide4.item.last= render 'tour_slide_4'
+            
+
+.container
+  .row
+    .col-sm-12
+      #controls
+        %a.prev.btn.btn-info.pull-left{"data-slide" => "prev", :href => "#carousel"} Prev
+        %a.next.btn.btn-success.pull-right{"data-slide" => "next", :href => "#carousel"} Next
+        %a.done.btn.btn-danger.pull-right{:href => "javascript:window.close();"} Close Tour

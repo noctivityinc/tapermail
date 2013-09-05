@@ -7,5 +7,6 @@ class AppController < ApplicationController
   end
 
   def tour
+    render layout: 'blank'
   end
 end
