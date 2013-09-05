@@ -4,15 +4,6 @@ source "$HOME/.rvm/environments/default"
 
 paths enter "${stage_path}"
 
-
-command exists bundle || gem install bundler --no-rdoc --no-ri
-
-if [[ -f Gemfile ]]
-then
-  log "Loading Gems"
-  bundle install --binstubs --without development test
-fi
-
 log step "migrations ~ Running (rake db:migrate)"
 rake db:migrate --trace
 log step success
