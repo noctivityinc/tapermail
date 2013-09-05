@@ -2,27 +2,8 @@
 
 source "$HOME/.rvm/environments/default"
 
-precompile_assets()
-{
-  path enter "${release_path}"
-  rake assets:precompile
-}
-
-if [[ -f Gemfile ]]
-then
-  bundle install --without test development >/dev/null 2>&1
-fi
-
-log step "Precompiling assets" 
-precompile_assets
+log step "Restarting unicorns"
+restart
 log step success
 
-
-log step "Stopping unicorns"
-stop
-log step success
-
-log step "Starting unicorns"
-start
-log step success
 
