@@ -2,11 +2,6 @@
 
 source $HOME/.env
 
-log step "migrations ~ Running (rake db:migrate)"
-rake db:migrate --trace
-log step success
-
-
 log step "Restarting unicorns"
 restart
 log step success

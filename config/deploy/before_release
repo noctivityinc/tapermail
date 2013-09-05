@@ -1,6 +1,0 @@
-#!/bin/sh
-
-source $HOME/.env
-
-paths enter "${stage_path}"
-
