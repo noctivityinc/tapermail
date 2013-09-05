@@ -81,6 +81,7 @@ group :test do
   gem 'valid_attribute'
   gem 'database_cleaner'
   gem 'fuubar'
+  gem 'rspec_api_test'
 end
 
 # gem "mocha", :group => :test

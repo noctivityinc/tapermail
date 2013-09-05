@@ -257,6 +257,8 @@ GEM
     ref (1.0.5)
     responders (1.0.0.rc)
       railties (>= 3.2, < 5)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -273,6 +275,11 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
+    rspec_api_test (0.0.1)
+      activesupport
+      bundler
+      rest-client
+      rspec (>= 2.0.0)
     ruby-progressbar (1.2.0)
     ruby_parser (3.2.2)
       sexp_processor (~> 4.1)
@@ -352,6 +359,7 @@ DEPENDENCIES
   rails (= 4.0.0)
   rb-fsevent
   rspec-rails
+  rspec_api_test
   ruby_parser
   sass-rails (~> 4.0.0)
   sdoc
