@@ -1,6 +1,8 @@
 class Api::V1::AppLogsController < ApplicationController
   prepend_before_filter :restrict_access
 
+  skip_before_filter  :verify_authenticity_token, only: [:create]
+
   respond_to :json
 
   def index
@@ -47,7 +49,7 @@ class Api::V1::AppLogsController < ApplicationController
   private
 
   def app_log_params
-    params.require(:app_log).permit(:uuid, :email_domain)
+    params.permit(:uuid, :email_domain)
   end
 
 end

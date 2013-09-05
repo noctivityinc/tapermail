@@ -36,7 +36,7 @@ describe "Api::V1::AppLogs" do
     end
 
     it "should allow for the record to be logged" do
-      post('/api/app_logs', {app_log: @data}, @auth_header)
+      post('/api/app_logs', @data, @auth_header)
 
       response.status.should be(201)
 
@@ -45,23 +45,19 @@ describe "Api::V1::AppLogs" do
     end
 
     it "should not allow for the record to be logged without a header" do
-      post('/api/app_logs', {app_log: @data})
+      post('/api/app_logs', @data)
 
       response.status.should be(401)
     end
 
     it "should not allow for the record to be logged without a UUID" do
-      post('/api/app_logs', {app_log: {
-        email_domain: 'testdomain.com'
-        }}, @auth_header)
+      post('/api/app_logs', { email_domain: 'testdomain.com' }, @auth_header)
 
       response.status.should be(400)
     end    
 
     it "should not allow for the record to be logged without an email domain" do
-      post('/api/app_logs', {app_log: {
-        uuid: SecureRandom.hex
-        }}, @auth_header)
+      post('/api/app_logs', { uuid: SecureRandom.hex }, @auth_header)
 
       response.status.should be(400)
     end
