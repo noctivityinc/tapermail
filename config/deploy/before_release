@@ -1,0 +1,10 @@
+#!/bin/sh
+
+source "$HOME/.rvm/environments/default"
+
+paths enter "${stage_path}"
+
+log step "migrations ~ Running (rake db:migrate)"
+rake db:migrate --trace
+log step success
+
