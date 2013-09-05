@@ -1,9 +1,10 @@
 #!/bin/sh
 
-source $HOME/.env
+source "$HOME/.env"
+
+cd $release_path
 
 log step "Restarting unicorns"
-restart
+sm unicorn restart
 log step success
-
 
