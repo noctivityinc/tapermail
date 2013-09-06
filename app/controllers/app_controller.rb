@@ -3,7 +3,7 @@ class AppController < ApplicationController
   end
 
   def version
-    render text: '1.0.17'
+    render json: {version: '1.0.17', url: 'http://tapermail.com/app/taper1017.zip'}
   end
 
   def tour
