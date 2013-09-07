@@ -10,12 +10,24 @@ class Api::V1::AppLogsController < ApplicationController
   end
 
   def create
-    @app_log = AppLog.new(app_log_params)
+    email_domains = params[:email_domain] ? params[:email_domain].split(',') : []
+
+    @app_logs = []
+    email_domains.each do |email_domain|
+      app_log = AppLog.new
+      app_log.email_domain = email_domain.strip
+      app_log.uuid = params[:uuid]
+      app_log.bytes_sent = params[:bytes_sent]
+      app_log.bytes_recv = params[:bytes_recv]
+      if app_log.save
+        @app_logs << app_log
+      end
+    end
 
     respond_to do |wants|
       wants.json {
-        if @app_log.save
-          render json: @app_log, status: 201
+        if @app_logs.present?
+          render json: @app_logs, status: 201
         else
           render json: nil, status: 400
         end
@@ -46,10 +58,5 @@ class Api::V1::AppLogsController < ApplicationController
   end
 
 
-  private
-
-  def app_log_params
-    params.permit(:uuid, :email_domain)
-  end
 
 end

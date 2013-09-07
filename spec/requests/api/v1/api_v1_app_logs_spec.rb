@@ -37,11 +37,35 @@ describe "Api::V1::AppLogs" do
 
     it "should allow for the record to be logged" do
       post('/api/app_logs', @data, @auth_header)
+      response.status.should be(201)
+
+      resp = JSON.parse(response.body).first
+      resp['id'].should_not be_blank
+    end
+
+    it "should properly record bytes in and out" do
+      @data.merge!({bytes_sent: 922337203685477580, bytes_recv: 922337203685477590})
+      post('/api/app_logs', @data, @auth_header)
+
+      response.status.should be(201)
+
+      resp = JSON.parse(response.body).first
+      resp['id'].should_not be_blank
+      resp['bytes_sent'].should eq 922337203685477580
+      resp['bytes_recv'].should eq 922337203685477590
+    end
+
+    it 'should properly store multiple email domains if passed' do
+      @data.merge!({email_domain: 'testdomain1.com, testdomain2.com,testdomain3.com'})
+      post('/api/app_logs', @data, @auth_header)
 
       response.status.should be(201)
 
       resp = JSON.parse(response.body)
-      resp['id'].should_not be_blank
+      resp.size.should eq 3
+      resp.detect {|x| x['email_domain'] == 'testdomain1.com'}.should be_true
+      resp.detect {|x| x['email_domain'] == 'testdomain2.com'}.should be_true
+      resp.detect {|x| x['email_domain'] == 'testdomain3.com'}.should be_true
     end
 
     it "should not allow for the record to be logged without a header" do
