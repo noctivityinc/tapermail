@@ -58,6 +58,12 @@ strong {
   font-family: 'Avenir Next LT W01 Bold';
 }
 
+// override bootstrap button 
+
+.btn-success {
+  background: #799e1e;
+  border-color: #799e1e;
+}
 
 // override bootstrap for nav
 header {
