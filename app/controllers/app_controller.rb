@@ -9,4 +9,8 @@ class AppController < ApplicationController
   def tour
     render layout: 'blank'
   end
+
+  def help
+    redirect_to 'http://taper.uservoice.com/knowledgebase'
+  end
 end
