@@ -6,7 +6,7 @@ class DownloadsController < InheritedResources::Base
 
     if download
       if cookies[:download] == token || download.number_remaining > 0
-        download.decrement!(:number_remaining) if download.number_remaining > 0 
+        download.decrement!(:number_remaining) if download.number_remaining > 0 && cookies[:download] != token 
         download.update_attributes(last_download_at: Time.now)
         cookies[:download] = { value: token, expires: 1.month.from_now }
       else

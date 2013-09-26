@@ -7,6 +7,7 @@ Tapermail::Application.routes.draw do
 
   get '/what' => 'welcome#what', as: 'what'
   get '/how' => 'welcome#how', as: 'how'
+  get '/feedback' => 'welcome#feedback'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
