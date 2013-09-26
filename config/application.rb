@@ -33,6 +33,13 @@ module Tapermail
 
     config.generators do |g|
       g.test_framework :rspec
+      g.view_specs false
+      g.helper_specs false
+      g.controller_specs false
     end
+
+
   end
 end
+
+APP_DOWNLOAD_LINK = 'https://s3.amazonaws.com/Taper/TaperPro.app.1.0.26.zip'

@@ -4,6 +4,7 @@
 //= require vendor
 //= require common
 //= require welcome
+//= require downloads
 //= require app
 //= require_self
 

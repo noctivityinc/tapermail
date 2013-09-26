@@ -1,0 +1,4 @@
+- flash.each do |type, message|
+  .alert.fade.in{ "data-alert" => "alert", class: "alert-#{alert_css(type)}"}
+    %a.close{href: "#", 'data-dismiss' => 'alert'} &times;
+    = message.html_safe

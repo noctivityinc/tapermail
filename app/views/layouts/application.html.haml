@@ -16,8 +16,14 @@
     = csrf_meta_tags
     %script{:src => "/js/modernizr-2.6.2.min.js"}
 
-  %body{:id => controller.controller_path.gsub('/','_'), :class => controller.action_name, :data => {:action => controller.action_name}}
+  %body{:id => controller.controller_path.gsub('/','_'), :class => "#{controller.action_name}", :data => {:action => controller.action_name}}
     = render 'layouts/header'
+
+    - unless flash.empty?
+      #flash.row
+        .col-xs-12
+          = render :partial => "layouts/flash", :locals => {flash: flash} 
+
     = yield
     = render 'layouts/footer'
   
