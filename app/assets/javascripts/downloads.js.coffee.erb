@@ -1,7 +1,8 @@
 TPR.downloads = (->
 
   show: ->
-    location.href = '<%= APP_DOWNLOAD_LINK %>'
+    window.setTimeout (-> location.href = '<%= APP_DOWNLOAD_LINK %>'), 3000
+
 )()
 
 
