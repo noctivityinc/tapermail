@@ -57,6 +57,8 @@ ActiveAdmin.setup do |config|
   # within the controller.
   config.authentication_method = :authenticate_admin_user!
 
+  config.authorization_adapter = ActiveAdmin::CanCanAdapter
+  config.on_unauthorized_access = :access_denied
 
   # == Current User
   #
@@ -101,14 +103,13 @@ ActiveAdmin.setup do |config|
   # This allows your users to comment on any resource registered with Active Admin.
   #
   # You can completely disable comments:
-  # config.allow_comments = false
+  config.allow_comments = false
   #
   # You can disable the menu item for the comments index page:
-  # config.show_comments_in_menu = false
+  config.show_comments_in_menu = false
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
-
 
   # == Batch Actions
   #

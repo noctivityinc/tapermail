@@ -33,4 +33,6 @@ Tapermail::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  ENV['taper_api_key'] = 'testtest'
 end

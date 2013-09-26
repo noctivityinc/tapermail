@@ -3,13 +3,12 @@ Tapermail::Application.routes.draw do
   get "app/help"
   get "app/version"
   get "app/tour"
+  get "dl/:token" => 'downloads#show', as: 'download'
 
   get '/what' => 'welcome#what', as: 'what'
   get '/how' => 'welcome#how', as: 'how'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -73,4 +72,6 @@ Tapermail::Application.routes.draw do
   end
 
   root 'welcome#index'
+
+  ActiveAdmin.routes(self)
 end

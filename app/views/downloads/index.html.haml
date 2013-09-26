@@ -1,0 +1,27 @@
+%h1 Listing downloads
+
+%table
+  %tr
+    %th Email
+    %th Name
+    %th Token
+    %th Last download at
+    %th Number remaining
+    %th
+    %th
+    %th
+
+  - @downloads.each do |download|
+    %tr
+      %td= download.email
+      %td= download.name
+      %td= download.token
+      %td= download.last_download_at
+      %td= download.number_remaining
+      %td= link_to 'Show', download
+      %td= link_to 'Edit', edit_download_path(download)
+      %td= link_to 'Destroy', download, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Download', new_download_path

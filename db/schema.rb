@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130907135508) do
+ActiveRecord::Schema.define(version: 20130925185253) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20130907135508) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "role"
   end
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
@@ -53,6 +54,16 @@ ActiveRecord::Schema.define(version: 20130907135508) do
     t.datetime "updated_at"
     t.integer  "bytes_sent",   limit: 8
     t.integer  "bytes_recv",   limit: 8
+  end
+
+  create_table "downloads", force: true do |t|
+    t.string   "email"
+    t.string   "name"
+    t.string   "token"
+    t.datetime "last_download_at"
+    t.integer  "number_remaining", default: 5
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "greylists", force: true do |t|

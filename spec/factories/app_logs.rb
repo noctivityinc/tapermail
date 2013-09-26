@@ -6,7 +6,7 @@ FactoryGirl.define do
   end
 
   factory :app_log do
-    uuid { SecureRandom.uuid }
+    uuid { SecureRandom.hex }
     email_domain
   end
 end

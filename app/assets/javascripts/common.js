@@ -14,7 +14,6 @@ TPR.common = {
         });
       });
 
-
       $('#share_twitter_window').click(function(ev) {
         var height, left, opts, top, url, width;
         ev.preventDefault();
