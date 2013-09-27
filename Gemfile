@@ -40,9 +40,9 @@ gem 'cancan'
 # gem 'nokogiri'
 # gem 'devise'
 # gem 'country_select'
-# gem "paperclip", "~> 3.4.1"
-# gem "paperclip-aws", "~> 1.6.7"
-# gem 'aws-sdk'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem "paperclip-aws", "~> 1.6.7"
+gem 'aws-sdk'
 gem 'faker'
 # gem 'will_paginate'
 # gem 'split', :require => 'split/dashboard'
