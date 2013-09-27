@@ -1,7 +1,8 @@
 TPR.downloads = (->
 
   show: ->
-    window.setTimeout (-> location.href = "<%=  AppVersion.standard.version_file.url if AppVersion.standard.present? %>"), 3000
+    url = $('#dlLink').attr('href')
+    window.setTimeout (-> location.href = url), 3000
 
 )()
 
