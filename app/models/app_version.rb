@@ -16,10 +16,12 @@
 #
 
 class AppVersion < ActiveRecord::Base
-  has_attached_file :version_file, {
-    :url => "/system/app/:hash.:extension",
-    :hash_secret => "163dc376143802f6281493d63c88a90c56cafcf2d4176b84b278b0d7536b6b7c2f7cd219ffcf3d7b19438168a67e34dba3c0ac08be2cc6c6f8994801059d7de1"
-  } 
+  has_attached_file :version_file
+
+  # , {
+  #   :url => "/system/app/:hash.:extension",
+  #   :hash_secret => "163dc376143802f6281493d63c88a90c56cafcf2d4176b84b278b0d7536b6b7c2f7cd219ffcf3d7b19438168a67e34dba3c0ac08be2cc6c6f8994801059d7de1"
+  # } 
 
   validates_presence_of :version_file, :version_type, :version_number
 
