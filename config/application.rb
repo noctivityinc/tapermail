@@ -38,8 +38,14 @@ module Tapermail
       g.controller_specs false
     end
 
+    config.paperclip_defaults = {
+      :storage => :s3,
+      :s3_credentials => {
+        :bucket => CONFIG[:s3_bucket_name],
+        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+      }
+    }
 
   end
 end
-
-APP_DOWNLOAD_LINK = 'https://s3.amazonaws.com/Taper/TaperPro.app.1.0.26.zip'

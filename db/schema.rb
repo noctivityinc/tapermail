@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130925185253) do
+ActiveRecord::Schema.define(version: 20130927142913) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -56,12 +56,38 @@ ActiveRecord::Schema.define(version: 20130925185253) do
     t.integer  "bytes_recv",   limit: 8
   end
 
+  create_table "app_versions", force: true do |t|
+    t.string   "version_file_file_name"
+    t.string   "version_file_content_type"
+    t.integer  "version_file_file_size"
+    t.datetime "version_file_updated_at"
+    t.text     "change_log"
+    t.string   "version_type"
+    t.string   "version_number"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "downloads", force: true do |t|
     t.string   "email"
     t.string   "name"
     t.string   "token"
     t.datetime "last_download_at"
     t.integer  "number_remaining", default: 5
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "globals", force: true do |t|
+    t.string   "taper_file_file_name"
+    t.string   "taper_file_content_type"
+    t.integer  "taper_file_file_size"
+    t.datetime "taper_file_updated_at"
+    t.string   "taper_pro_file_file_name"
+    t.string   "taper_pro_file_content_type"
+    t.integer  "taper_pro_file_file_size"
+    t.datetime "taper_pro_file_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
