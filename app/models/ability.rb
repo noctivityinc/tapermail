@@ -11,8 +11,10 @@ class Ability
       can :manage, :all
       cannot :manage, AdminUser
       cannot :read, AdminUser
+      cannot :read, AppVersion
     when "marketer"
       cannot :manage, AppLog
+      cannot :manage, AppVersion
       cannot :read, :all
       can :read, ActiveAdmin::Page, name: 'Dashboard'
       can :read, Download
