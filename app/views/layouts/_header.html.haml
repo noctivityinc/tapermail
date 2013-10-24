@@ -17,7 +17,22 @@
         %li= link_to "Our Kickstarter Campaign", 'http://www.kickstarter.com/projects/1369431496/taper-the-end-of-email-overload', class: 'text-primary'
         %li
           %div.navbar-btn.get_taper
-            %a.btn.btn-success.btn-sm{href: 'http://eepurl.com/Hpxw5'}
+            %a.btn.btn-success.btn-sm.dl_cta
               %span.icon.icon-download
               Download Now
 
+
+#downloadBar
+  .row
+    %form#mc-embedded-subscribe-form.validate.form-inline{action: "http://tapermail.us3.list-manage.com/subscribe/post?u=ecf4cd08345ef81e6776f9fcb&id=bfc250d09f", method: "post", name: "mc-embedded-subscribe-form", novalidate: "", target: "_blank", role: 'form'}
+      .form-group.center.col-sm-9.col-sm-offset-1
+        .col-sm-6
+          %label.control-label.pull-right Enter your email to download Taper:
+        .col-sm-6
+          %input#mce-EMAIL.required.email.form-control{name: "EMAIL", type: "email", value: "", placeholder: 'enter email'}
+      .col-sm-1
+        %input#mc-embedded-subscribe.btn.btn-primary.pull-right{name: "subscribe", type: "submit", value: "Get it!"}/
+  .row.top10
+    .col-sm-12.text-center.text-muted
+      Requires Mac OSX.  For a Windows version, 
+      = link_to "click here", 'http://www.kickstarter.com/projects/1369431496/taper-the-end-of-email-overload'
