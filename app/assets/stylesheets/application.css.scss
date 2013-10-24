@@ -58,6 +58,25 @@ strong {
   font-family: 'Avenir Next LT W01 Bold';
 }
 
+.top10 { margin-top: 10px}
+.top15 { margin-top: 15px}
+.top20 { margin-top: 20px}
+.top25 { margin-top: 25px}
+.bottom10 {margin-bottom: 10px;}
+.bottom20 {margin-bottom: 20px;}
+
+#downloadBar {
+  display: none;
+  width: 100%;
+  padding: 20px 0px;
+  border-top: 3px inset #333;
+  border-bottom: 3px inset #333;
+
+  label {
+    color: white;
+  }
+}
+
 .frameit {
   margin: 15px 0px;
   background: #fff;
