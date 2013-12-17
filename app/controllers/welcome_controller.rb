@@ -3,6 +3,6 @@ class WelcomeController < ApplicationController
   end
 
   def feedback
-    redirect_to 'http://taper.uservoice.com'
+    redirect_to 'https://moot.it/taper'
   end
 end

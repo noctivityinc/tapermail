@@ -17,7 +17,7 @@ class AppController < ApplicationController
   end
 
   def help
-    redirect_to 'http://taper.uservoice.com/knowledgebase'
+    redirect_to 'https://moot.it/taper'
   end
 
   def absolute(url)
